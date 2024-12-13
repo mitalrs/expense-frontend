@@ -16,7 +16,7 @@ function App() {
 
   async function fetchUser() {
     setIsLoading(true);
-    const res = await fetch(`${process.env.REACT_APP_API_URL}/user`, {
+    const res = await fetch(`${process.env.REACT_APP_API_URL}user`, {
       headers: {
         Authorization: `Bearer ${token}`
       },
