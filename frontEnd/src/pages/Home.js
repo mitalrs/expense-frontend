@@ -1,21 +1,22 @@
-import Container from "@mui/material/Container";
+import React from "react";
+import { Container } from "@mui/system";
+import TransactionForm from "../components/TransactionForm.js";
+import TransactionsList from "../components/TransactionsList.js";
+import { useEffect, useState } from "react";
 import Cookies from "js-cookie";
-import React, { useEffect, useState } from "react";
-import TransactionChart from "../components/TransactionChart";
-import TransactionForm from "../components/TransactionForm";
-import TransactionsList from "../components/TransactionsList";
+import TransactionChart from "../components/TransactionChart.js";
 
 export default function Home() {
   const [transactions, setTransactions] = useState([]);
   const [editTransaction, setEditTransaction] = useState({});
 
   useEffect(() => {
-    fetchTransctions();
+    fetchTransactions();
   }, []);
 
-  async function fetchTransctions() {
+  async function fetchTransactions() {
     const token = Cookies.get("token");
-    const res = await fetch(`${process.env.REACT_APP_API_URL}/transaction`, {
+    const res = await fetch(`${process.env.REACT_APP_API_URL}transaction`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -26,16 +27,16 @@ export default function Home() {
 
   return (
     <Container>
-      <TransactionChart data={transactions} />
+        <TransactionChart data={transactions} />
 
       <TransactionForm
-        fetchTransctions={fetchTransctions}
+        fetchTransactions={fetchTransactions}
         editTransaction={editTransaction}
       />
 
       <TransactionsList
         data={transactions}
-        fetchTransctions={fetchTransctions}
+        fetchTransactions={fetchTransactions}
         setEditTransaction={setEditTransaction}
       />
     </Container>

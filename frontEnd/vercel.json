@@ -1,0 +1,12 @@
+{
+    "rewrites": [
+      {
+        "source": "/api/:path*",
+        "destination": "https://extra-dex.vercel.app/:path*"
+      },
+      {
+        "source": "/api/:path*/",
+        "destination": "https://extra-dex.vercel.app/:path*/"
+      }
+    ]
+  }
