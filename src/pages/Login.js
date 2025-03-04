@@ -51,7 +51,7 @@ export default function Login() {
 
     return (
         <ThemeProvider theme={theme}>
-        <Container component="main" maxWidth="xs" sx={{bgcolor:'#78739d'}}>
+        <Container component="main" maxWidth="xs" sx={{bgcolor:'#ffffff'}}>
             <CssBaseline />
             <Box
                 sx={{

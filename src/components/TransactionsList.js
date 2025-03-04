@@ -52,7 +52,7 @@ export default function TransactionsList({
     <>
       <Typography sx={{ marginTop: 10 }} variant="h6">List of Transactions</Typography>
       <TableContainer component={Paper}>
-        <Table sx={{ minWidth: 650, bgcolor:'#8a85aa' }} aria-label="simple table">
+        <Table sx={{ minWidth: 650, bgcolor:'#ffffff' }} aria-label="simple table">
           <TableHead>
             <TableRow>
               <TableCell align="center">Amount</TableCell>

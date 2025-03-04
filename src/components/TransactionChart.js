@@ -23,7 +23,7 @@ export default function TransactionChart({data}) {
   })
   
   return (
-    <Paper sx={{marginTop:5, bgcolor:'#8a85aa'}}>
+    <Paper sx={{marginTop:5, bgcolor:'#ffffff'}}>
       <Chart
         data={chartDate}
       >

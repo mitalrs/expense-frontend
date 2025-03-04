@@ -96,7 +96,7 @@ export default function CategoryForm({ editCategory }) {
   return (
     <Card sx={{ minWidth: 275, marginTop: 10 }}>
       <ThemeProvider theme={theme}>
-      <CardContent sx={{bgcolor:'#8a85aa'}}>
+      <CardContent sx={{bgcolor:'#ffffff'}}>
         <Typography variant="h6">Add new Category</Typography>
 
         <Box component='form' onSubmit={handleSubmit} sx={{ display: "flex" }}>

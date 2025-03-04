@@ -52,7 +52,7 @@ export default function Category() {
             <CategoryForm editCategory={editCategory} />
             <Typography sx={{ marginTop: 10 }} variant="h6">List of Categories</Typography>
             <TableContainer component={Paper}>
-                <Table sx={{ minWidth: 650, bgcolor:'#8a85aa' }} aria-label="simple table">
+                <Table sx={{ minWidth: 650, bgcolor:'#ffffff' }} aria-label="simple table">
                     <TableHead>
                         <TableRow>
                             <TableCell align="center">Lable</TableCell>

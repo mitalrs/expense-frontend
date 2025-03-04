@@ -85,7 +85,7 @@ export default function TransactionForm({ fetchTransactions, editTransaction }) 
   }
 
   return (
-    <Card sx={{ minWidth: 275, marginTop: 10, bgcolor:'#8a85aa' }}>
+    <Card sx={{ minWidth: 275, marginTop: 10, bgcolor:'#ffffff' }}>
       <CardContent>
         <Typography variant="h6">Add new transaction</Typography>
 
