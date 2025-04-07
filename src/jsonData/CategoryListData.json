@@ -1,0 +1,48 @@
+[
+    {
+      "_id": "673f6d20eb2bb6daa977b195",
+      "label": "Travel",
+      "icon": "flight"
+    },
+    {
+      "_id": "673f6d20eb2bb6daa977b196",
+      "label": "Shopping",
+      "icon": "shopping-bag"
+    },
+    {
+      "_id": "673f6d20eb2bb6daa977b197",
+      "label": "Investment",
+      "icon": "chart-line"
+    },
+    {
+      "_id": "673f6d20eb2bb6daa977b198",
+      "label": "Bills",
+      "icon": "file-invoice-dollar"
+    },
+    {
+      "_id": "673f6d20eb2bb6daa977b199",
+      "label": "Education",
+      "icon": "graduation-cap"
+    },
+    {
+      "_id": "673f6d20eb2bb6daa977b191",
+      "label": "Subscriptions",
+      "icon": "repeat"
+    },
+    {
+      "_id": "673f6d20eb2bb6daa977b192",
+      "label": "Freelancing",
+      "icon": "laptop-code"
+    },
+    {
+      "_id": "673f6d20eb2bb6daa977b193",
+      "label": "Marketing",
+      "icon": "bullhorn"
+    },
+    {
+      "_id": "673f6d20eb2bb6daa977b194",
+      "label": "Entertainment",
+      "icon": "gift"
+    }
+]
+  

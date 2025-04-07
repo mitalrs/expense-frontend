@@ -1,0 +1,118 @@
+[
+    {
+      "month": "November",
+      "totalExpenses": 11181,
+      "transactions": [
+        {
+          "_id": "673f70789900cd1572e6ab8a",
+          "amount": 425,
+          "category_id": "673f6d20eb2bb6daa977b195",
+          "date": "2024-11-21T17:39:28.707Z",
+          "description": "Education subscriptions and clothing business tools",
+          "type": "expense"
+        },
+        {
+          "_id": "673f719e1f0a39ca5b5558e5",
+          "amount": 9878,
+          "category_id": "673f6d20eb2bb6daa977b196",
+          "date": "2024-11-21T17:44:41.730Z",
+          "description": "Software license renewals and tech content purchase",
+          "type": "expense"
+        },
+        {
+          "_id": "673f720e1f0a39ca5b5558f0",
+          "amount": 878,
+          "category_id": "673f6d20eb2bb6daa977b196",
+          "date": "2024-11-23T12:30:00.000Z",
+          "description": "Client meeting snacks and internet bill",
+          "type": "expense"
+        }
+      ],
+      "_id": 11
+    },
+    {
+      "month": "December",
+      "totalExpenses": 54656,
+      "transactions": [
+        {
+          "_id": "673f70779900cd1572e6ab82",
+          "amount": 54656,
+          "category_id": "673f6d20eb2bb6daa977b197",
+          "date": "2024-12-12T19:11:00.000Z",
+          "description": "Laptop purchase and end-of-year software deals",
+          "type": "expense"
+        }
+      ],
+      "_id": 12
+    },
+    {
+      "month": "June",
+      "totalExpenses": 23210,
+      "transactions": [
+        {
+          "_id": "673f801a5500cd1572e6ac01",
+          "amount": 15000,
+          "category_id": "673f6d20eb2bb6daa977b198",
+          "date": "2024-06-10T14:20:00.000Z",
+          "description": "Travel and accommodation for tech conference",
+          "type": "expense"
+        },
+        {
+          "_id": "673f801b5500cd1572e6ac02",
+          "amount": 8210,
+          "category_id": "673f6d20eb2bb6daa977b199",
+          "date": "2024-06-15T09:45:00.000Z",
+          "description": "Online course enrollment and domain renewals",
+          "type": "expense"
+        }
+      ],
+      "_id": 13
+    },
+    {
+      "month": "April",
+      "totalExpenses": 12789,
+      "transactions": [
+        {
+          "_id": "673f801c5500cd1572e6ac03",
+          "amount": 789,
+          "category_id": "673f6d20eb2bb6daa977b191",
+          "date": "2024-04-05T08:30:00.000Z",
+          "description": "Github Copilot and Notion subscriptions",
+          "type": "expense"
+        },
+        {
+          "_id": "673f801d5500cd1572e6ac04",
+          "amount": 12000,
+          "category_id": "673f6d20eb2bb6daa977b192",
+          "date": "2024-04-18T13:00:00.000Z",
+          "description": "Freelancer payouts for design and dev work",
+          "type": "expense"
+        }
+      ],
+      "_id": 14
+    },
+    {
+      "month": "October",
+      "totalExpenses": 19500,
+      "transactions": [
+        {
+          "_id": "673f801e5500cd1572e6ac05",
+          "amount": 9500,
+          "category_id": "673f6d20eb2bb6daa977b193",
+          "date": "2024-10-10T11:00:00.000Z",
+          "description": "Digital ads and promotions",
+          "type": "expense"
+        },
+        {
+          "_id": "673f801f5500cd1572e6ac06",
+          "amount": 10000,
+          "category_id": "673f6d20eb2bb6daa977b194",
+          "date": "2024-10-25T16:00:00.000Z",
+          "description": "Team dinner and Diwali gifts",
+          "type": "expense"
+        }
+      ],
+      "_id": 15
+    }
+  ]
+  

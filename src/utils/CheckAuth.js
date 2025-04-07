@@ -7,4 +7,5 @@ export default function CheckAuth({children}) {
 
 
     return auth.isAuthenticated ? children : <Navigate to="/login" />;
+    // return children;
 }

@@ -13,24 +13,38 @@ import IconButton from '@mui/material/IconButton';
 import dayjs from 'dayjs';
 import Cookies from 'js-cookie';
 import { useSelector } from 'react-redux';
+import dummycategories from '../jsonData/CategoryListData.json'
+import { useNavigate } from "react-router-dom";
 
 
 
-export default function TransactionsList({ 
-  data, 
-  fetchTransactions, 
+export default function TransactionsList({
+  data,
+  fetchTransactions,
   setEditTransaction 
 }) {
+  const navigate = useNavigate();
+  const auth = useSelector(state => state.auth);
+  const user = auth.user;
 
-  const user = useSelector(state => state.auth.user);
   function categoryName(id) {
-    const category = user.categories.find((category)=> category._id === id);
+    if (!auth.isAuthenticated) {
+      const category = dummycategories.find((category) => category._id === id);
 
-    return category ? category.label : 'NA';
+      return category ? category.label : 'NA';
+    } else {
+      const category = user.categories.find((category) => category._id === id);
+
+      return category ? category.label : 'NA';
+    }
   }
 
+
   async function remove(_id) {
-    const token = Cookies.get('token');
+    if (!auth.isAuthenticated) {
+      navigate("/login");
+    }else{
+      const token = Cookies.get('token');
     if (!window.confirm('Are you sure to delete')) return;
     const res = await fetch(`${process.env.REACT_APP_API_URL}transaction/${_id}`, {
       method: "DELETE",
@@ -41,18 +55,27 @@ export default function TransactionsList({
     if (res.ok) {
       fetchTransactions();
       window.alert("Deleted Successfully");
-    }
+    }}
   }
 
   function formatDate(date) {
     return dayjs(date).format("DD MMM, YYYY");
   }
 
+  function editBtnClick(row) {
+    console.log("edit clicked")
+    if(!auth.isAuthenticated){
+      navigate("/login");
+    }else{
+      setEditTransaction(row)
+    }
+  }
+
   return (
     <>
       <Typography sx={{ marginTop: 10 }} variant="h6">List of Transactions</Typography>
       <TableContainer component={Paper}>
-        <Table sx={{ minWidth: 650, bgcolor:'#ffffff' }} aria-label="simple table">
+        <Table sx={{ minWidth: 650, bgcolor: '#ffffff' }} aria-label="simple table">
           <TableHead>
             <TableRow>
               <TableCell align="center">Amount</TableCell>
@@ -74,11 +97,11 @@ export default function TransactionsList({
                       <TableCell align="center" component="th" scope="row">
                         {row.amount}
                       </TableCell>
-                      <TableCell align="center">{row.description}</TableCell>
+                      <TableCell align="center">{row.description}</TableCell> 
                       <TableCell align="center">{categoryName(row.category_id)}</TableCell>
                       <TableCell align="center">{formatDate(row.date)}</TableCell>
-                      <TableCell align="center">
-                        <IconButton color="primary" component="label" onClick={() => setEditTransaction(row)}>
+                       <TableCell align="center">
+                        <IconButton color="primary" component="label" onClick={() => editBtnClick(row)}>
                           <EditTwoToneIcon />
                         </IconButton>
                         <IconButton color="warning" component="label" onClick={() => remove(row._id)}>
@@ -90,7 +113,7 @@ export default function TransactionsList({
                 })
               ))
             }
-            
+
           </TableBody>
         </Table>
       </TableContainer>

@@ -46,6 +46,7 @@ export default function Category() {
         dispatch(setUser(_user));
         }
     }
+    console.log("categories",user.categories)
 
     return (
         <Container>
